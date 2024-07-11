@@ -1,0 +1,69 @@
+<!-- templates/history.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Predictions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Historical Predictions</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Duration</th>
+                <th>Heart Rate</th>
+                <th>Body Temp</th>
+                <th>Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prediction in predictions %}
+            <tr>
+                <td>{{ prediction[0] }}</td>  <!-- ID -->
+                <td>{{ prediction[1] }}</td>  <!-- Gender -->
+                <td>{{ prediction[2] }}</td>  <!-- Age -->
+                <td>{{ prediction[3] }}</td>  <!-- Height -->
+                <td>{{ prediction[4] }}</td>  <!-- Weight -->
+                <td>{{ prediction[5] }}</td>  <!-- Duration -->
+                <td>{{ prediction[6] }}</td>  <!-- Heart Rate -->
+                <td>{{ prediction[7] }}</td>  <!-- Body Temp -->
+                <td>{{ prediction[8] }}</td>  <!-- Prediction -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
